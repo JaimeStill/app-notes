@@ -5,7 +5,12 @@ public static class SeedExtensions
 {
     public static async Task Seed(this AppDbContext db)
     {
-        Console.WriteLine($"Seeding {db.Database.ProviderName}");
-        await Task.CompletedTask;        
+        Console.WriteLine("Seeding Albums");
+        AlbumSeeder albumSeeder = new(db);
+        await albumSeeder.Seed();
+
+        Console.WriteLine("Seeding Books");
+        BookSeeder bookSeeder = new(db);
+        await bookSeeder.Seed();
     }
 }

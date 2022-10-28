@@ -132,6 +132,9 @@ namespace AppNotes.Data.Migrations
                     b.Property<string>("DateCreated")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("DateReleased")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
@@ -168,13 +171,7 @@ namespace AppNotes.Data.Migrations
                 {
                     b.HasBaseType("AppNotes.Models.Entities.Product");
 
-                    b.Property<string>("Artist")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DateReleased")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Label")
+                    b.Property<string>("RecordLabel")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("album");
@@ -183,12 +180,6 @@ namespace AppNotes.Data.Migrations
             modelBuilder.Entity("AppNotes.Models.Entities.Book", b =>
                 {
                     b.HasBaseType("AppNotes.Models.Entities.Product");
-
-                    b.Property<string>("Author")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DatePublished")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Pages")
                         .HasColumnType("int");

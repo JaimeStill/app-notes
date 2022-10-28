@@ -3,8 +3,9 @@ public class Product : Entity
 {
     public int Stock { get; set; }
     public string Type { get; set; }
-    public string Creator { get; private set; }
+    public string Creator { get; set; }
     public string ProductCode { get; set; }
+    public string DateReleased { get; set; }
     public string Link { get; private set; }
     public string Image { get; private set; }
 

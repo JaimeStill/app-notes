@@ -1,0 +1,97 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "client-build",
+            "command": "npm run build",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/app/"
+            }
+        },
+        {
+            "label": "client-install",
+            "command": "npm i",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/app/"
+            }
+        },
+        {
+            "label": "client-start",
+            "command": "npm run start",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/app/"
+            },
+            "presentation": {
+                "panel": "dedicated"
+            },
+            "isBackground": true
+        },
+        {
+            "label": "server-build",
+            "command": "dotnet",
+            "type": "shell",
+            "problemMatcher": "$msCompile",
+            "args": [
+                "build"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/server/"
+            }
+        },
+        {
+            "label": "server-start",
+            "command": "dotnet",
+            "type": "process",
+            "problemMatcher": "$msCompile",
+            "args": [
+                "watch",
+                "run"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/server/AppNotes.Api/"
+            },
+            "presentation": {
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "db-drop",
+            "command": "dotnet",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/server/AppNotes.Data"
+            },
+            "args": [
+                "ef",
+                "database",
+                "drop",
+                "-f",
+                "-s",
+                "../AppNotes.Api"
+            ]
+        },
+        {
+            "label": "db-update",
+            "command": "dotnet ef database update -s ../AppNotes.Api",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/server/AppNotes.Data"
+            }
+        },
+        {
+            "label": "db-seed",
+            "command": "dotnet",
+            "type": "shell",
+            "problemMatcher": "$msCompile",
+            "args": [
+                "run"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/server/AppNotes.DbCli"
+            }
+        }
+    ]
+}
