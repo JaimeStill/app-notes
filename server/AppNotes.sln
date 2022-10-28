@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppNotes.Api", "AppNotes.Api\AppNotes.Api.csproj", "{01991A9C-6087-4D35-8299-AB8D5FC3EE2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppNotes.Data", "AppNotes.Data\AppNotes.Data.csproj", "{ED1F241F-BED5-40FD-94BB-BFE6D4658D1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppNotes.DbCli", "AppNotes.DbCli\AppNotes.DbCli.csproj", "{BA25D6BA-ECF3-4623-B2CC-5DB31F77CDC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppNotes.Models", "AppNotes.Models\AppNotes.Models.csproj", "{ADA655BC-A9F2-4A86-BBBE-195809BCC5EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppNotes.Services", "AppNotes.Services\AppNotes.Services.csproj", "{146FA397-C893-4C9D-9C55-54FACE1D6A32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01991A9C-6087-4D35-8299-AB8D5FC3EE2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01991A9C-6087-4D35-8299-AB8D5FC3EE2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01991A9C-6087-4D35-8299-AB8D5FC3EE2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01991A9C-6087-4D35-8299-AB8D5FC3EE2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED1F241F-BED5-40FD-94BB-BFE6D4658D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED1F241F-BED5-40FD-94BB-BFE6D4658D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED1F241F-BED5-40FD-94BB-BFE6D4658D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED1F241F-BED5-40FD-94BB-BFE6D4658D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA25D6BA-ECF3-4623-B2CC-5DB31F77CDC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA25D6BA-ECF3-4623-B2CC-5DB31F77CDC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA25D6BA-ECF3-4623-B2CC-5DB31F77CDC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA25D6BA-ECF3-4623-B2CC-5DB31F77CDC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA655BC-A9F2-4A86-BBBE-195809BCC5EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA655BC-A9F2-4A86-BBBE-195809BCC5EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA655BC-A9F2-4A86-BBBE-195809BCC5EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA655BC-A9F2-4A86-BBBE-195809BCC5EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{146FA397-C893-4C9D-9C55-54FACE1D6A32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{146FA397-C893-4C9D-9C55-54FACE1D6A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{146FA397-C893-4C9D-9C55-54FACE1D6A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{146FA397-C893-4C9D-9C55-54FACE1D6A32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

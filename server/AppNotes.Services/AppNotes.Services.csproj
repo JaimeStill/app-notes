@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AppNotes.Data\AppNotes.Data.csproj" />
+    <ProjectReference Include="..\AppNotes.Models\AppNotes.Models.csproj" />
+  </ItemGroup>
+
+</Project>
