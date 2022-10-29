@@ -1,0 +1,12 @@
+<section fxLayout="row"
+         fxLayoutAlign="start stretch"
+         class="rounded-top p4 full-height">
+    <img [src]="product?.image"
+         [alt]="product?.name">
+    <section fxLayout="column"
+             fxLayoutAlign="space-evenly end"
+             fxFlex>
+        <p class="m4 mat-title">{{product?.name}}</p>
+        <p class="m4 mat-subheading-2">{{product?.creator}}</p>
+    </section>
+</section>

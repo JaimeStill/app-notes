@@ -1,1 +1,31 @@
-<p class="mat-title m8">Home</p>
+<ng-template #loading>
+    <mat-progress-bar mode="indeterminate"
+                      color="accent"></mat-progress-bar>
+</ng-template>
+<section fxLayout="column"
+         fxLayoutAlign="start stretch">
+    <section fxLayout="row"
+             fxLayoutAlign="start center">
+        <p class="m8 mat-title"
+           fxFlex>Albums</p>
+        <button mat-button
+                class="m8"
+                color="primary"
+                (click)="add()">
+            Add Album
+        </button>
+    </section>
+    <ng-container *ngIf="albumSrc else loading">
+        <async-source searchLabel="Search Albums"
+                      emptyLabel="No Albums Available"
+                      [src]="albumSrc">
+            <ng-container *ngIf="albumSrc.result$ | async as query else loading">
+                <product-card *ngFor="let p of query.data"
+                              [product]="p"
+                              (edit)="edit($event)"
+                              (remove)="remove($event)"
+                              (view)="view($event)"></product-card>
+            </ng-container>
+        </async-source>
+    </ng-container>
+</section>

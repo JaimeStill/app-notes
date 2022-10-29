@@ -1,0 +1,24 @@
+<card layout="column"
+      alignment="start stretch"
+      options="background-card rounded card-outline-divider"
+      [width]="420">
+    <product-display [product]="product"></product-display>
+    <section fxLayout="row"
+             fxLayoutAlign="space-between center"
+             class="background-default rounded-bottom p4">
+        <button mat-icon-button
+                color="warn"
+                (click)="remove.emit(product)">
+            <mat-icon>delete_outlined</mat-icon>
+        </button>
+        <button mat-icon-button
+                (click)="edit.emit(product)">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button
+                color="primary"
+                (click)="view.emit(product)">
+            <mat-icon>arrow_forward</mat-icon>
+        </button>
+    </section>
+</card>

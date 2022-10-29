@@ -1,0 +1,28 @@
+<div class="mat-typography">
+    <h2 mat-dialog-title>
+        <span *ngIf="album?.id > 0">Update Album</span>
+        <span *ngIf="!(album?.id > 0)">Add Album</span>
+    </h2>
+    <mat-dialog-content>
+        <album-form #editor
+                    [data]="album"
+                    (saved)="saved($event)"></album-form>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-button
+                color="primary"
+                [disabled]="editor.form?.invalid || !(editor.storage.hasState)"
+                (click)="editor.save()">
+            Save Album
+        </button>
+        <button mat-button
+                color="accent"
+                [disabled]="!(editor.storage?.hasState)"
+                (click)="editor.reset()">
+            Discard Changes
+        </button>
+        <button mat-button
+                color="warn"
+                mat-dialog-close>Cancel</button>
+    </mat-dialog-actions>
+</div>
