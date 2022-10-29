@@ -2,7 +2,10 @@
          fxLayoutAlign="start stretch"
          class="rounded-top p4 full-height">
     <img [src]="product?.image"
-         [alt]="product?.name">
+         [alt]="product?.name"
+         [width]="180"
+         [height]="180"
+         [style.object-fit]="'cover'">
     <section fxLayout="column"
              fxLayoutAlign="space-evenly end"
              fxFlex>

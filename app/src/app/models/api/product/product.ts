@@ -26,7 +26,7 @@ export const GenerateProductForm = <T extends Product>(p: T, fb: FormBuilder) =>
             Validators.required,
             Validators.min(0)
         ]],
-        type: [p?.type ?? ''],
+        type: [p?.type],
         creator: [p?.creator ?? '', Validators.required],
         productCode: [p?.productCode, Validators.required],
         link: [p?.link ?? ''],
