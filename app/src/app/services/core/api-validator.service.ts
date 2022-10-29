@@ -43,13 +43,13 @@ export class ApiValidator {
         form: FormGroup,
         control: AbstractControl,
         error: string = 'api'
-    ): Promise<Subscription> => {
+    ): Promise<void> => {
         if (control.value) {
             const res = await validator(form.value);
             this.setErrorState(control, error, res ? null : true);
         }
 
-        return control
+        control
             .valueChanges
             .pipe(
                 debounceTime(350),

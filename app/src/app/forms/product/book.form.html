@@ -1,0 +1,21 @@
+<ng-container *ngIf="form">
+    <product-form creatorLabel="Author"
+                  productCodeLabel="ISBN"
+                  releasedLabel="Date Published"
+                  [formGroup]="form"
+                  [form]="form"
+                  [api]="bookApi">
+        <mat-form-field class="my4">
+            <mat-label>Publisher</mat-label>
+            <input formControlName="publisher"
+                   matInput>
+            <mat-error *ngIf="publisher?.errors?.required">Record Label is required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="my4">
+            <mat-label>Pages</mat-label>
+            <input formControlName="pages" type="number" min="1" matInput>
+            <mat-error *ngIf="pages?.errors?.required">Pages is required</mat-error>
+            <mat-error *ngIf="pages?.errors?.min">Pages must be greater than zero</mat-error>
+        </mat-form-field>
+    </product-form>
+</ng-container>

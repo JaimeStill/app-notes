@@ -1,0 +1,14 @@
+<ng-container *ngIf="form">
+    <product-form creatorLabel="Artist"
+                  productCodeLabel="UPC"
+                  [formGroup]="form"
+                  [form]="form"
+                  [api]="albumApi">
+        <mat-form-field class="my4">
+            <mat-label>Record Label</mat-label>
+            <input formControlName="recordLabel"
+                   matInput>
+            <mat-error *ngIf="recordLabel?.errors?.required">Record Label is required</mat-error>
+        </mat-form-field>
+    </product-form>
+</ng-container>

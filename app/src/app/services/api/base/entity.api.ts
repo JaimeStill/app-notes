@@ -38,14 +38,6 @@ export abstract class EntityApi<T extends Entity> {
         this.queryUrl = `${this.api}query`;
     }
 
-    protected base = () => <T>{
-        id: 0,
-        name: '',
-        url: ''
-    }
-
-    getBase = () => this.base();
-
     generateStorage = (entity: T): IStorage<T> =>
         new SessionStorage<T>(
             entity?.id

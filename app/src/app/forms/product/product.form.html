@@ -1,0 +1,45 @@
+<form [formGroup]="form">
+    <section fxLayout="column"
+             fxLayoutAlign="start stretch">
+        <ng-template #loading>
+            <mat-progress-bar mode="indeterminate"
+                              color="accent"></mat-progress-bar>
+        </ng-template>
+        <mat-form-field class="my4">
+            <mat-label>{{nameLabel}}</mat-label>
+            <input formControlName="name"
+                   matInput>
+            <mat-error *ngIf="name?.errors?.required">{{nameLabel}} is required</mat-error>
+            <mat-error *ngIf="name?.errors?.api">{{nameLabel}} is already in use</mat-error>
+        </mat-form-field>
+        <mat-form-field class="my4">
+            <mat-label>{{creatorLabel}}</mat-label>
+            <input formControlName="creator"
+                   matInput>
+            <mat-error *ngIf="creator?.errors?.required">{{creatorLabel}} is required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="my4">
+            <mat-label>{{productCodeLabel}}</mat-label>
+            <input formControlName="productCode"
+                   matInput>
+            <mat-error *ngIf="name?.errors?.required">{{productCodeLabel}} is required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="my4">
+            <mat-label>{{releasedLabel}}</mat-label>
+            <input formControlName="dateReleased"
+                   type="date"
+                   matInput>
+            <mat-error *ngIf="dateReleased?.errors?.required">{{releasedLabel}} is required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="my4">
+            <mat-label>Stock</mat-label>
+            <input formControlName="stock"
+                   type="number"
+                   min="0"
+                   matInput>
+            <mat-error *ngIf="stock?.errors?.required">Stock is required</mat-error>
+            <mat-error *ngIf="stock?.errors?.min">Stock must be zero or greater</mat-error>
+        </mat-form-field>
+        <ng-content></ng-content>
+    </section>
+</form>
